@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Review</title>
+    <style>
+        /* Styles for the page layout */
+        .back-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-decoration: none;
+      color: #fff;
+    }
+        body {
+            background-image: url("gifs/movies.gif"); /* Placeholder for background GIF */
+            background-repeat: repeat;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: #ff00ff;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #00ff00;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Styles for the movie review sections */
+        .review-section {
+            margin-bottom: 30px;
+        }
+
+        .review-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .review-content {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        /* Styles for the review form */
+        .review-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .review-form input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #0000ff;
+            margin-bottom: 10px;
+        }
+
+        .review-form textarea {
+            width: 400px;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #0000ff;
+            margin-bottom: 10px;
+        }
+
+        .review-form input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0000ff;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const audio = new Audio("loosie.mp3"); // Updated the audio file name
+            audio.loop = true;
+            audio.play();
+        });
+    </script>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <img src="imgs/back.jpg" alt="Back to Landing Page" width="300" height="100">
+        <span class="button-text">Go Back</span>
+      </a>
+    <audio src="imgs/loosie.mp3" autoplay loop></audio>
+    
+    <div class="container">
+        <h1>Movie Review</h1>
+
+        <!-- Movies Watched Section -->
+        <div class="review-section">
+            <h2 class="review-title">Movies Watched</h2>
+            <div class="movie">
+                <h3 class="movie-title">Fantastic Mr. Fox</h3>
+                <p class="movie-content">
+                    This was a banger, but not as banger as
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">Scott Pilgrim vs. The World</h3>
+                <p class="movie-content">
+                    Scott Pilgrim vs. The World was a thrilling experience from start to finish. The action sequences were incredible, and the plot kept me on the edge of my seat. I can't wait to see it again!
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">Rango</h3>
+                <p class="movie-content">
+                    Rango was a visually stunning film with a unique and captivating story. The animation was top-notch, and the voice acting was superb.
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">WALL-E</h3>
+                <p class="movie-content">
+                    WALL-E is a heartwarming and thought-provoking film that explores important themes such as environmentalism and human connection. The animation and storytelling are exceptional.
+                </p>
+            </div>
+        </div>
+
+        <!-- Movies to Watch Section -->
+        <div class="review-section">
+            <h2 class="review-title">Movies to Watch</h2>
+            <div class="movie">
+                <h3 class="movie-title">The Boy and the Heron</h3>
+                <p class="movie-content">
+                    The Boy and the Heron is a highly anticipated film that promises to be a beautiful and touching story. I can't wait to watch it!
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">Pen15</h3>
+                <p class="movie-content">
+                    Pen15 is a popular TV series that has been highly recommended to me. I'm excited to give it a watch!
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">Gilmore Girls</h3>
+                <p class="movie-content">
+                    Gilmore Girls is a beloved show with a strong fan base. I'm looking forward to experiencing the witty dialogue and charming characters.
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">How I Met Your Mother</h3>
+                <p class="movie-content">
+                    How I Met Your Mother is a classic sitcom that I've heard great things about. I can't wait to start watching it!
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">Grand Budapest Hotel</h3>
+                <p class="movie-content">
+                    Grand Budapest Hotel is a classic movie that I've seen many times. I'm excited to see it again!
+                </p>
+            </div>
+        </div>
+        <div class="fun-section">
+            <h2 class="fun-title">heyyyyyy Alex</h2>
+            <img src="gifs/fun.gif" alt="Fun GIF">
+        </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    .back-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-decoration: none;
+      color: #fff;
+    }
+    .button-image {
+      width: 100px;
+      height: 100px;
+    }
+    .button-text {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    body {
+      background-color: #000;
+      color: #0F0;
+      font-family: "Courier New", monospace;
+      padding: 20px;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 36px;
+    }
+    .terminal {
+      border: 1px solid #0F0;
+      padding: 10px;
+      height: 1000px;
+      overflow-y: scroll;
+      background-color: #000;
+    }
+    .terminal::before {
+      content: "$ ";
+      color: #0F0;
+    }
+    .line {
+      animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    @keyframes blink-caret {
+      from,
+      to {
+        background-color: transparent;
+      }
+      50% {
+        background-color: #0F0;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var terminal = document.querySelector(".terminal");
+      var terminalLines = [
+        "Welcome to the Gamer Zone",
+        "",
+        "Top 10 Slurs:",
+        "- Slur 1: 'Fa***t'",
+        "- Slur 2: 'kayoot'",
+        "- Slur 3: 'retarded'",
+        "- Slur 4: 'stupid retarded'",
+        "- Slur 5: 'kill yourself'",
+        "- Slur 6: 'meow meow'",
+        "- Slur 7: 'just a girl'",
+        "- Slur 8: 'no drivers liscence'",
+        "- Slur 9: \\tomatoe emoji",
+        "- Slur 10: 'kawaii'",
+      ];
+      var lineIndex = 0;
+      var charIndex = 0;
+
+      function printNextChar() {
+        if (lineIndex < terminalLines.length) {
+          var currentLine = terminalLines[lineIndex];
+          if (charIndex < currentLine.length) {
+            terminal.innerHTML += currentLine.charAt(charIndex);
+            charIndex++;
+          } else {
+            terminal.innerHTML += "<br>";
+            lineIndex++;
+            charIndex = 0;
+          }
+          terminal.scrollTop = terminal.scrollHeight;
+          setTimeout(printNextChar, 50);
+        }
+      }
+
+      setTimeout(printNextChar, 2000);
+    });
+  </script>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <img src="imgs/back.jpg" alt="Back to Landing Page" width="300" height="100">
+        <span class="button-text">Go Back</span>
+      </a>
+  <div class="terminal"></div>
+</body>
+</html>
