@@ -1,80 +1,173 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    body {
-      background-image: url("gifs/grwth.gif");
-      background-repeat: repeat;
-      background-size: 200px;
+    <title>Movie Review</title>
+    <style>
+        /* Styles for the page layout */
+        .back-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-decoration: none;
+      color: #fff;
     }
+        body {
+            background-image: url("gifs/movies.gif"); /* Placeholder for background GIF */
+            background-repeat: repeat;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: #ff00ff;
+        }
 
-    h1 {
-      color: #ffff00;
-      text-align: center;
-      margin-top: 200px;
-      font-size: 36px;
-    }
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #00ff00;
+        }
 
-    ul {
-      color: #ffff00;
-      font-size: 24px;
-      padding-left: 40px;
-    }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
 
-    li {
-      background-color: #000000;
-      color: #ffffff;
-      padding: 10px;
-      margin: 10px;
-      border-radius: 5px;
-    }
+        /* Styles for the movie review sections */
+        .review-section {
+            margin-bottom: 30px;
+        }
 
-    li:before {
-      content: "";
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      background-color: #ffff00;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-  </style>
+        .review-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .review-content {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        /* Styles for the review form */
+        .review-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .review-form input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #0000ff;
+            margin-bottom: 10px;
+        }
+
+        .review-form textarea {
+            width: 400px;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #0000ff;
+            margin-bottom: 10px;
+        }
+
+        .review-form input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0000ff;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const audio = new Audio("loosie.mp3"); // Updated the audio file name
+            audio.loop = true;
+            audio.play();
+        });
+    </script>
 </head>
-<body >
-  <h1>Date Ideas</h1>
-  <ul>
-    <li>
-      <strong>Lego Making</strong>
-      <p>We will have fun building and creating with Lego bricks. (Possibly Inhebriated. I think it will make it challenging).</p>
-    </li>
-    <li>
-      <strong>Ice Skating</strong>
-      <p>The one at Rockefeller? I will snow your ass for sure if you can't keep up (jk)</p>
-    </li>
-    <li>
-      <strong>Perfume Sniffing</strong>
-      <p>You will have to lead the way on this one. All I know if hot guy Abercrombie and Dior Suavage</p>
-    </li>
-    <li>
-      <strong>Candle Making</strong>
-      <p>There is a place near Dr Clarks.</p>
-    </li>
-    <li>
-      <strong>THC Baking</strong>
-      <p>Baking while baked lol. Yuuuuuhhhhhrrrr</p>
-    </li>
-    <li>
-      <strong>Costco Sampling</strong>
-      <p>I think it would be really fun if we could go to Costco and go to every station and pretend to be like food experts. We will pretend to be posh and review each station and then we shall list our favorites at the end. It would be cool if we could dress up fancy too. Idk just something I always wanted to do.</p>
-    </li>
-    <li>
-      <strong>Carti Seft Titled Album Cover</strong>
-      <p>Fine, we can do this if you relaly insist.</p>
-    </li>
-    <li>
-        <strong>Throw Bread to Ducks</strong>
-        <p>This one is relly gas. You have to believe me. The ducks love the bread too.</p>
-    </li>
-  </ul>
+<body>
+    <a href="index.html" class="back-button">
+        <img src="imgs/back.jpg" alt="Back to Landing Page" width="300" height="100">
+        <span class="button-text">Go Back</span>
+      </a>
+    <audio src="imgs/loosie.mp3" autoplay loop></audio>
+    
+    <div class="container">
+        <h1>Movie Review</h1>
+
+        <!-- Movies Watched Section -->
+        <div class="review-section">
+            <h2 class="review-title">Movies Watched</h2>
+            <div class="movie">
+                <h3 class="movie-title">Fantastic Mr. Fox</h3>
+                <p class="movie-content">
+                    This was a banger, but not as banger as I thought that it would be. I  was really nervous when we started watching because you were holding my hand in front of the whole team and that was the first time we had really been public in front of other peoople. I know it was not a huge deal, but it was important to me. 
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">Scott Pilgrim vs. The World</h3>
+                <p class="movie-content">
+                    I didn't want to tell you why I wanted to watch this movie. I also forgot how much I like it. I think that I like it because it is a bit weird and quirky and difficult to follow.  I really enjoyed watching this one with you, even though I fell asleep both times. 
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">Rango</h3>
+                <p class="movie-content">
+                    Wow, thank you for reminding me how hard thsi movie was. I really like the cinematography. Like the scenes were really cool. Admittedly, I wsas falling asleep by the end, but I really enhjoyed the move. I can understand why it is your favorite. What I still cannot understand is why I am Rango though. OHHH, and my favorite part of the movie: sometimes you would like queue attention to a particular scene or try to quiet me or something and then you would watch it and burst out laughting. I love it when you do that. It was really cute. 
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">WALL-E</h3>
+                <p class="movie-content">
+                    Kinda ass. My bad gang. I thought it was a banger.
+                </p>
+            </div>
+        </div>
+
+        <!-- Movies to Watch Section -->
+        <div class="review-section">
+            <h2 class="review-title">Movies to Watch</h2>
+            <div class="movie">
+                <h3 class="movie-title">The Boy and the Heron</h3>
+                <p class="movie-content">
+                    I found a version online with English subtitles, but I think that it is in Turkish? Can't wait to be able to grab a clean version.
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">Pen15</h3>
+                <p class="movie-content">
+                    I expect good thinsg from this one. You talk about it a lot. 
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">Gilmore Girls</h3>
+                <p class="movie-content">
+                    I think you are just watching this one with Sofia?
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">How I Met Your Mother</h3>
+                <p class="movie-content">
+                    I watched like half of this with other Alex over summer between my freshman and sophmore year. It is really good and funny. I think that it is particullarly relevant to early adult int New York City. I think that it should be a lit-hum requirement.
+                </p>
+            </div>
+            <div class="movie">
+                <h3 class="movie-title">Grand Budapest Hotel</h3>
+                <p class="movie-content">
+                    If you couldn't tell from this and Mr. Fox, I like Wes Anderson films. I like the symmetry lol. I remember it being kinda weird quirky funny, but want to see it again. I also remember that there is a girl  with a tattoo of Mexico on her FACE?!?!?! Wack. 
+                </p>
+            </div>
+        </div>
+        <div class="fun-section">
+            <h2 class="fun-title">heyyyyyy Alex</h2>
+            <img src="gifs/fun.gif" alt="Fun GIF">
+        </div>
 </body>
 </html>
