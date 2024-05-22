@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twizzy Acceptance!</title>
+  <style>
+    body {
+      background-color: #000000;
+      font-family: 'Courier New', Courier, monospace;
+      color: #00FF00;
+      text-align: center;
+    }
+    .container {
+      border: 2px solid #00FF00;
+      padding: 20px;
+      margin: 20px;
+      background-color: #000000;
+      box-shadow: 0 0 10px #00FF00;
+    }
+    .gif {
+      margin: 10px;
+      border: 2px solid #00FF00;
+      box-shadow: 0 0 10px #00FF00;
+    }
+    .message {
+      font-size: 24px;
+      color: #00FF00;
+      text-shadow: 0 0 5px #00FF00;
+    }
+    .ascii-art {
+      font-size: 18px;
+      color: #00FF00;
+      text-shadow: 0 0 5px #00FF00;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #000000;
+      color: #00FF00;
+      font-size: 20px;
+      text-decoration: none;
+      border: 2px solid #00FF00;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #00FF00;
+    }
+    .button:hover {
+      background-color: #00FF00;
+      color: #000000;
+    }
+    .header {
+      font-size: 48px;
+      color: #00FF00;
+      text-shadow: 0 0 10px #00FF00;
+      animation: glitch 1s infinite;
+    }
+    @keyframes glitch {
+      0% { transform: translate(0, 0); }
+      20% { transform: translate(-5px, 5px); }
+      40% { transform: translate(5px, -5px); }
+      60% { transform: translate(-5px, 5px); }
+      80% { transform: translate(5px, -5px); }
+      100% { transform: translate(0, 0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">Twizzy Acceptance!</h1>
+    <div class="message">
+      <p>You have accepted the invitation to the Yeat concert!</p>
+      <p>Get ready for a twizzy night filled with tonkas turbans and get ready to go luh geeky!</p>
+    </div>
+    <img src="assets/gifs/futuristic1.gif" class="gif">
+    <img src="assets/gifs/futuristic2.gif" class="gif">
+  </div>
+  <div class="container">
+    <h2>Twizzy ASCII Art:</h2>
+    <pre class="ascii-art">
+        _____ ______   ___  ________   ________           ___  ___     
+        |\   _ \  _   \|\  \|\   ____\ |\   ____\         |\  \|\  \    
+        \ \  \\\__\ \  \ \  \ \  \___|_\ \  \___|_        \ \  \\\  \   
+         \ \  \\|__| \  \ \  \ \_____  \\ \_____  \        \ \  \\\  \  
+          \ \  \    \ \  \ \  \|____|\  \\|____|\  \        \ \  \\\  \ 
+           \ \__\    \ \__\ \__\____\_\  \ ____\_\  \        \ \_______\
+            \|__|     \|__|\|__|\_________\\_________\        \|_______|
+                               \|_________\|_________|                  
+                                                          
+
+  <div class="container">
+    <h2>Countdown to Twizzy Night:</h2>
+    <div id="countdown" class="message"></div><script>
+        // Set the date and time of the concert
+        var concertDate = new Date("June 24, 2024 20:00:00").getTime();
+  
+        // Update the countdown every second
+        var countdownTimer = setInterval(function() {
+          // Get the current date and time
+          var now = new Date().getTime();
+  
+          // Calculate the time remaining
+          var timeRemaining = concertDate - now;
+  
+          // Check if the concert date has already passed
+          if (timeRemaining < 0) {
+            clearInterval(countdownTimer);
+            document.getElementById("countdown").innerHTML = "The concert has already happened!";
+          } else {
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  
+            // Display the countdown timer
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+          }
+        }, 1000);
+      </script>
+  </div>
+  <div class="container">
+    <h2>Twizzy Love Message:</h2>
+    <div class="message">
+      <p>I can't wait to experience this incredible night with you!</p>
+      <p>Our love will shine brighter than the stage lights!</p>
+      <p>Get ready for a night you'll never forget!</p>
+      <p>I love you more than Yeat loves his tonka truck!</p>
+    </div>
+    <img src="assets/gifs/futuristic3.gif" class="gif">
+    <img src="assets/gifs/futuristic4.gif" class="gif">
+  </div>
+  <div class="container">
+    <h2>See you soon!</h2>
+    <p class="message">Until then, miss u big dawg!</p>
+    <a href="index.html" class="button">Back to Invitation</a>
+  </div>
+</body>
+</html>

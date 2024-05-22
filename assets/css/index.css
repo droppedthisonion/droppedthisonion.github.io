@@ -1,0 +1,138 @@
+/* index.css */
+
+body {
+    background-image: url('../imgs/space.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    color: #FFFFFF; /* White text color */
+}
+
+.space-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h1 {
+    color: #FF00FF; /* Magenta text */
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: 'Papyrus', cursive;
+}
+
+.cat-image {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 20px;
+    font-family: 'Jokerman', cursive;
+}
+
+.more-text {
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFFF00; /* Yellow background */
+    font-family: 'Jokerman', cursive;
+    color: #FF00FF; /* Magenta text */
+    border: 2px solid #FF00FF; /* Magenta border */
+    border-radius: 20px;
+    width: 800px;
+    margin: auto;
+}
+
+.links {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #0000FF; /* Blue text */
+    margin: 20px;
+    padding: 10px 20px;
+    border: 2px solid #0000FF; /* Blue border */
+    border-radius: 20px;
+    background-color: #FFFF00; /* Yellow background */
+    font-family: 'Jokerman', cursive;
+}
+
+.links a:hover {
+    color: #FFFF00; /* Yellow text on hover */
+    background-color: #0000FF; /* Blue background on hover */
+}
+
+.crazy-image {
+    max-width: 300px;
+    height: auto;
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+marquee {
+    color: rgb(255, 255, 0);
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 0);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

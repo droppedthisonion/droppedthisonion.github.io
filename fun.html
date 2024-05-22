@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Terminal</title>
+  <link rel="stylesheet" href="assets/css/fun.css">
+  <style>
+    .terminal {
+      background-color: #000000;
+      color: #cccccc;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      line-height: 1.4;
+      padding: 20px;
+      height: 400px;
+      overflow-y: scroll;
+    }
+
+    .terminal-content {
+      margin-bottom: 10px;
+    }
+
+    .command-line {
+      display: flex;
+    }
+
+    .prompt {
+      color: #00356e;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+
+    .prompt::before {
+      content: '> ';
+    }
+
+    .command-input {
+      background-color: transparent;
+      border: none;
+      color: #cccccc;
+      outline: none;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-content"></div>
+    <div class="command-line">
+      <span class="prompt"></span>
+      <input type="text" class="command-input" autofocus>
+    </div>
+  </div>
+  <script src="assets/js/terminal.js"></script>
+</body>
+</html>

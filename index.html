@@ -3,112 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the Dopest Website Ever!</title>
+    <title>Jackson's Website for Alex</title>
+    <link rel="stylesheet" href="assets/css/index.css">
     <style>
-        body {
-            background-image: url('imgs/space.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            text-align: center;
-        }
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #000;
+    z-index: 9999;
+    font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
 
-        .space-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
+.popup h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
 
-        h1 {
-            color: #FF00FF; /* Magenta text */
-            font-size: 36px;
-            text-transform: uppercase;
-            letter-spacing: 10px;
-            font-family: 'Papyrus', cursive;
-        }
+.popup p {
+    font-size: 14px;
+    line-height: 1.4;
+}
 
-        .cat-image {
-            max-width: 100%;
-            height: auto;
-        }
+.popup a {
+    color: #0066cc;
+    text-decoration: none;
+}
 
-        p {
-            font-size: 18px;
-            line-height: 1.5;
-            margin-top: 20px;
-            font-family: 'Jokerman', cursive;
-        }
+.popup a:hover {
+    text-decoration: underline;
+}
 
-        .more-text {
-            font-size: 24px;
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #FFFF00; /* Yellow background */
-            font-family: 'Jokerman', cursive;
-            color: #FF00FF; /* Magenta text */
-            border: 2px solid #FF00FF; /* Magenta border */
-            border-radius: 20px;
-            width: 800px;
-            margin: auto;
-        }
+.popup button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
-        .links {
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-
-        .links a {
-            text-decoration: none;
-            font-size: 24px;
-            color: #0000FF; /* Blue text */
-            margin: 20px;
-            padding: 10px 20px;
-            border: 2px solid #0000FF; /* Blue border */
-            border-radius: 20px;
-            background-color: #FFFF00; /* Yellow background */
-            font-family: 'Jokerman', cursive;
-            
-        }
-
-        .links a:hover {
-            color: #FFFF00; /* Yellow text on hover */
-            background-color: #0000FF; /* Blue background on hover */
-        }
-
-        .crazy-image {
-            max-width: 300px;
-            height: auto;
-            margin: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .gif-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px;
-        }
-
-        marquee {
-            color: rgb(255, 255, 0);
-            font-size: 24px;
-            font-weight: bold;
-            background-color: rgb(0, 0, 0);
-            border: 2px solid rgb(255, 255, 0);
-            padding: 10px;
-            margin: 10px;
-            border-radius: 10px;
-        }
+.popup button:hover {
+    background-color: #004c99;
+}
     </style>
 </head>
 <body>
     <div class="space-background"></div>
     <h1>Holllllllaaaaaaa!</h1>
-    <img class="cat-image" src="gifs/cat.gif" alt="Cat Image">
+    <img class="cat-image" src="assets/gifs/cat.gif" alt="Cat Image">
     
     <marquee>Alex once stole a $1k vetements hoodie (but the real crime is that I can't even wear it outside)</marquee>
 
@@ -125,6 +77,12 @@
         <a href="music.html">New hit single music video</a>
         <a href="moviereview.html">Movie reviews</a>
         <a href="dates.html">Date ideas</a>
+        <a href="invite.html">Invite to Twizzy Show</a>
+        <a href="rizz.html">URGENT: VIEW MESSAGE</a>
+        <a href="day.html">Sexy Day</a>
+        <a href="fun.html">Love Terminal</a>
+        <a href="file.html">Love Story Thing</a>
+        <a href="earth.html">Whole Foods Adventure</a>
     </div>
 
     <div class="more-text">
@@ -156,5 +114,24 @@
     </div>      
 
     <div class="crazy-images">
-        <img class="crazy-image" src="imgs/kirby.png" alt="Crazy Image 1">
-        <img class="crazy-image" src="imgs/onion.webp" alt="Crazy Image 2">
+        <img class="crazy-image" src="assets/imgs/kirby.png" alt="Crazy Image 1">
+        <img class="crazy-image" src="assets/imgs/onion.webp" alt="Crazy Image 2">
+    </div>
+    <div id="termsPopup" class="popup">
+        <h2>Terms and Conditions</h2>
+        <p>By using this site, you agree to our terms and conditions.</p>
+        <p>Please read the full <a href="terms.html" target="_blank">Terms and Conditions</a>.</p>
+        <button onclick="acceptTerms()">Accept</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            document.getElementById("termsPopup").style.display = "block";
+        };
+
+        function acceptTerms() {
+            document.getElementById("termsPopup").style.display = "none";
+        }
+    </script>
+</body>
+</html>

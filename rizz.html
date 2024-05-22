@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Chat</title>
+  <link rel="stylesheet" href="assets/css/rizz.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="message">
+      <div class="profile-pic">
+        <img src="assets/imgs/prof-pic.jpg" alt="Profile Picture">
+      </div>
+      <div class="message-content">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var messageContent = document.querySelector('.message-content');
+      var message = "Hello Alex, I noticed you have a profile picture of a very beautiful (but also intelligent looking!) female, and I am under the presumption that this godess is you? It is quite astonishing to see a female here in the autistic-fencers Official discord. I am quite popular around here in this server, so if you require guidance, please throw me a mention. I will assist you at any hour, day or night. And, before you are mistaken, I do not seek your hand in a romantic way; although I am not opposed in the event you are interested in me, as many women often are. I am a man of standard, and I do not bow to just any female that comes my way, unlike my peers... So rest assured that I will not be in the way of your gaming and socializing experience. Consider me a Player 2.. a twizzy a gang-member, and perhaps we can enjoy some video games together some time. I see you play val, and are you good at overwatch? I am an overwatch aficionado, so I would be happy to assist you in games. Platonically of course, unless you (like many others) change your mind on that. I look forward to our future together (as friends of course.)";
+      
+      var i = 0;
+      var typingSpeed = 50; // Adjust the typing speed (in milliseconds)
+      
+      function typeMessage() {
+        if (i < message.length) {
+          messageContent.innerHTML += message.charAt(i);
+          i++;
+          setTimeout(typeMessage, typingSpeed);
+        }
+      }
+      
+      setTimeout(typeMessage, 1000); // Start typing after a 1-second delay
+    });
+  </script>
+</body>
+</html>
