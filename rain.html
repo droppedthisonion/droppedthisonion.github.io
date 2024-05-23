@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-05-23</title>
+    <style>
+                .back-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-decoration: none;
+      color: #fff;
+    }
+        body {
+            background-color: #bfc7d5;
+            font-family: 'Courier New', Courier, monospace;
+            color: #b87333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px #000000;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .retro-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #b87333;
+            background-color: #0c1e3f;
+            border: 4px solid #b87333;
+            border-radius: 8px;
+            transition: all 0.3s;
+            margin-top: 30px;
+        }
+        .retro-button:hover {
+            background-color: #b87333;
+            color: #0c1e3f;
+        }
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('assets/imgs/8bit-water-droplets.gif');
+            background-repeat: repeat;
+            opacity: 0.7;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .image-gallery img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <img src="assets/imgs/back.jpg" alt="Back to Landing Page" width="300" height="100">
+        <span class="button-text">Go Back</span>
+      </a>
+    <div class="animated-background"></div>
+    <div class="container">
+        <h1>How was ur day my love?</h1>
+        <p>How were your classes today? I was really crossed last night, but had a ton of fun. I really like your Indomie. That shit was gas, and I will have to send a picture to Carter. I do not know what your plans are tonight, but if you want to, there is a cool park on like an island. May be fun (It is pretty popular, so you may have gone before)</p>
+     <a href="index.html" class="retro-button">Go back to home</a>
+        <div class="image-gallery">
+            <img src="assets/imgs/retro-couple.png" alt="Cozy Couple">
+            <img src="assets/imgs/retro-rain.png" alt="Rainy Window">
+            <img src="assets/imgs/retro-hot-chocolate.jpg" alt="Hot Chocolate">
+            <img src="assets/imgs/retro-movie.jpg" alt="Movie Night">
+        </div>
+    </div>
+</body>
+</html>
