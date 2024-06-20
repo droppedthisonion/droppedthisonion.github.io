@@ -1,0 +1,56 @@
+const gifPaths = [
+    "assets/gifs/AD12.gif",
+    "assets/gifs/ad1.gif",
+    "assets/gifs/ad10.gif",
+    "assets/gifs/ad11.gif",
+    "assets/gifs/ad13.gif",
+    "assets/gifs/ad14.gif",
+    "assets/gifs/ad15.gif",
+    "assets/gifs/ad16.gif",
+    "assets/gifs/ad17.gif",
+    "assets/gifs/ad18.gif",
+    "assets/gifs/ad19.gif",
+    "assets/gifs/ad2.gif",
+    "assets/gifs/ad20.gif",
+    "assets/gifs/ad3.gif",
+    "assets/gifs/ad4.gif",
+    "assets/gifs/ad5.gif",
+    "assets/gifs/ad6.gif",
+    "assets/gifs/ad7.gif",
+    "assets/gifs/ad8.gif",
+    "assets/gifs/ad9.gif",
+    "assets/gifs/after_party.gif",
+    "assets/gifs/allstep.gif",
+    "assets/gifs/animated.gif",
+    "assets/gifs/as2.gif",
+    "assets/gifs/background.gif",
+    "assets/gifs/cat.gif",
+    "assets/gifs/catstuff.gif",
+    "assets/gifs/cyber1.gif",
+    "assets/gifs/fun.gif",
+    "assets/gifs/funny-mcdonalds.gif",
+    "assets/gifs/funny.gif",
+    "assets/gifs/funny1.gif",
+    "assets/gifs/futuristic1.gif",
+    "assets/gifs/futuristic2.gif",
+    "assets/gifs/futuristic3.gif",
+    "assets/gifs/futuristic4.gif",
+    "assets/gifs/gif1.gif",
+    "assets/gifs/gif2.gif",
+    "assets/gifs/gif3.gif",
+    "assets/gifs/gif4.gif",
+    "assets/gifs/grwth.gif",
+    "assets/gifs/jet.gif",
+    "assets/gifs/movies.gif",
+    "assets/gifs/rain.gif",
+    "assets/gifs/repeat.gif",
+    "assets/gifs/tonka_truck.gif",
+    "assets/gifs/turban.gif"
+];
+
+const gifElements = document.querySelectorAll(".gif-container img");
+
+gifElements.forEach(gifElement => {
+    const randomIndex = Math.floor(Math.random() * gifPaths.length);
+    gifElement.src = gifPaths[randomIndex];
+});

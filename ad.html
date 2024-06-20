@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90's Retro Website</title>
+    <style>
+        body {
+            background-color: #8B4513;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: #F0E68C;
+            text-align: center;
+            background-image: url('assets/gifs/background.gif');
+            background-repeat: repeat;
+            background-size: 200px;
+            animation: backgroundScroll 20s linear infinite;
+        }
+    
+        @keyframes backgroundScroll {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 200px 200px;
+            }
+        }
+    
+        h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px #000;
+            animation: glitch 1s linear infinite;
+        }
+    
+        @keyframes glitch {
+            2%, 64% {
+                transform: translate(2px, 0) skew(0deg);
+            }
+            4%, 60% {
+                transform: translate(-2px, 0) skew(0deg);
+            }
+            62% {
+                transform: translate(0, 0) skew(5deg);
+            }
+        }
+    
+        .gif-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            perspective: 800px;
+        }
+    
+        .gif-container img {
+            border: 5px solid #FFF8DC;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+    
+        .gif-container img:hover {
+            transform: translateZ(50px) rotateX(20deg) rotateY(20deg);
+            
+        }
+        .message {
+            margin-top: 40px;
+            font-size: 24px;
+            color: #c0deff;
+            text-shadow: 2px 2px #000;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>What's good Yung Alex</h1>
+    <div class="gif-container">
+        <img src="" alt="Random GIF 1">
+        <img src="" alt="Random GIF 2">
+        <img src="" alt="Random GIF 3">
+    </div>
+
+    <div class="message">
+        <p>What's good my little sugarplum autist,</p>
+        <p>I created this totally rad 90's website just for you! It's filled with all the awesome GIFs that remind me of our totally tubular times together. You're the flyest girl I know, and I wanted to show you how much you mean to me.</p>
+        <p>only 4 days until we go to Yeat togethe. I still remember leaning over your sholder in ADP and seeing Yeat on your spotify made me so excited. </p>
+        <p>I am so lucky to be with you, and I cannot wait to see Yeat with you.</p>
+        <p>Love,<br>Jackson from saber</p>
+    </div>  
+
+    <div class="gif-container">
+        <img src="" alt="Random GIF 4">
+        <img src="" alt="Random GIF 5">
+        <img src="" alt="Random GIF 6">
+    </div>
+
+    <script>
+        const gifPaths = [
+            "assets/gifs/AD12.gif",
+            "assets/gifs/ad1.gif",
+            "assets/gifs/ad10.gif",
+            "assets/gifs/ad11.gif",
+            "assets/gifs/ad13.gif",
+            "assets/gifs/ad14.gif",
+            "assets/gifs/ad15.gif",
+            "assets/gifs/ad16.gif",
+            "assets/gifs/ad17.gif",
+            "assets/gifs/ad18.gif",
+            "assets/gifs/ad19.gif",
+            "assets/gifs/ad2.gif",
+            "assets/gifs/ad20.gif",
+            "assets/gifs/ad3.gif",
+            "assets/gifs/ad4.gif",
+            "assets/gifs/ad5.gif",
+            "assets/gifs/ad6.gif",
+            "assets/gifs/ad7.gif",
+            "assets/gifs/ad8.gif",
+            "assets/gifs/ad9.gif",
+            "assets/gifs/after_party.gif",
+            "assets/gifs/allstep.gif",
+            "assets/gifs/animated.gif",
+            "assets/gifs/as2.gif",
+            "assets/gifs/background.gif",
+            "assets/gifs/cat.gif",
+            "assets/gifs/catstuff.gif",
+            "assets/gifs/cyber1.gif",
+            "assets/gifs/fun.gif",
+            "assets/gifs/funny-mcdonalds.gif",
+            "assets/gifs/funny.gif",
+            "assets/gifs/funny1.gif",
+            "assets/gifs/futuristic1.gif",
+            "assets/gifs/futuristic2.gif",
+            "assets/gifs/futuristic3.gif",
+            "assets/gifs/futuristic4.gif",
+            "assets/gifs/gif1.gif",
+            "assets/gifs/gif2.gif",
+            "assets/gifs/gif3.gif",
+            "assets/gifs/gif4.gif",
+            "assets/gifs/grwth.gif",
+            "assets/gifs/jet.gif",
+            "assets/gifs/movies.gif",
+            "assets/gifs/rain.gif",
+            "assets/gifs/repeat.gif",
+            "assets/gifs/tonka_truck.gif",
+            "assets/gifs/turban.gif"
+        ];
+
+        const gifElements = document.querySelectorAll(".gif-container img");
+
+        gifElements.forEach(gifElement => {
+            const randomIndex = Math.floor(Math.random() * gifPaths.length);
+            gifElement.src = gifPaths[randomIndex];
+        });
+    </script>
+    
+</body>
+</html>
