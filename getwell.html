@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Well Soon, Alex!</title>
+    <style>
+        body {
+            background-image: url('assets/imgs/ethereal.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Georgia', serif;
+            color: #5a4a42;
+            letter-spacing: 0.01em;
+        }
+        .container {
+            background: rgba(255, 255, 245, 0.82);
+            box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.10), 0 0 0 4px #e5d6d1cc;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 60px auto 0 auto;
+            padding: 36px 28px 28px 28px;
+            border: 3px double #b48a78;
+            position: relative;
+            overflow: hidden;
+        }
+        .container:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 8px;
+            border: 1.5px solid #e5d6d1;
+            pointer-events: none;
+            opacity: 0.7;
+            z-index: 1;
+        }
+        .container:after {
+            content: "";
+            position: absolute;
+            inset: 8px;
+            border-radius: 6px;
+            background: repeating-linear-gradient(
+                135deg,
+                rgba(180, 138, 120, 0.08),
+                rgba(180, 138, 120, 0.08) 2px,
+                transparent 2px,
+                transparent 8px
+            );
+            pointer-events: none;
+            z-index: 0;
+        }
+        h1 {
+            font-family: 'Georgia', serif;
+            color: #b48a78;
+            font-size: 2.2em;
+            margin-bottom: 0.4em;
+            text-shadow: 0 1px 0 #fff8, 0 2px 8px #e5cfcf44;
+            letter-spacing: 0.03em;
+            position: relative;
+            z-index: 2;
+        }
+        p, .subcontainer, .quote {
+            position: relative;
+            z-index: 2;
+        }
+        p {
+            font-size: 1.13em;
+            color: #6d5c4d;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            line-height: 1.6;
+        }
+        .soft-divider {
+            border: none;
+            border-top: 1.2px solid #e5d6d1;
+            margin: 22px 0;
+        }
+        .subcontainer {
+            background: rgba(255, 255, 255, 0.68);
+            border: 1px solid #d8cfc7;
+            border-radius: 6px;
+            margin: 18px 0;
+            padding: 18px 20px 14px 20px;
+            box-shadow: 0 2px 8px 0 rgba(180, 160, 140, 0.07), inset 0 1px 4px #e5d6d1aa;
+            font-size: 1em;
+            position: relative;
+        }
+        .subcontainer:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 6px;
+            border: 0.5px solid #e5d6d1;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+        .subcontainer-title {
+            font-family: 'Georgia', serif;
+            color: #a88c7a;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 0.4em;
+            letter-spacing: 0.02em;
+        }
+        .subcontainer-list {
+            margin: 0.3em 0 0 1.2em;
+            padding: 0;
+            color: #6d5c4d;
+        }
+        .subcontainer-list li {
+            margin-bottom: 0.3em;
+            font-size: 0.98em;
+        }
+        .quote {
+            font-size: 1em;
+            color: #a89c8c;
+            text-align: right;
+            font-style: italic;
+            margin-top: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get Well Soon, Alex</h1>
+        <p>
+            I know you haven't been feeling your best lately, and I'm really hoping you have a quick and smooth recovery.<br>
+            If you can, try to get some rest and consider reaching out to a doctor or telehealth if you need to.<br>
+            Most importantly, please remember that I'm here for you—if you need anything at all, just let me know.<br>
+            <br>
+            When we were at Riverside, I realized how much I've missed making these little websites for you.<br>
+            I really enjoyed doing this, and I'm glad to be able to share another one with you.<br>
+            <br>
+            — Jackson
+        </p>
+        <hr class="soft-divider">
+
+        <div class="subcontainer">
+            <div class="subcontainer-title">Advice for Feeling Better</div>
+            <ul class="subcontainer-list">
+                <li>Rest as much as you need—your body knows best.</li>
+                <li>Drink warm tea or water with honey.</li>
+                <li>Let yourself daydream and listen to soft music.</li>
+            </ul>
+        </div>
+
+        <div class="subcontainer">
+            <div class="subcontainer-title">Gentle Foods to Try</div>
+            <ul class="subcontainer-list">
+                <li>Fresh fruit or a little applesauce</li>
+                <li>Plain toast or crackers</li>
+                <li>Warm soup or broth</li>
+            </ul>
+        </div>
+
+        <div class="quote">
+            "The world is full of magic things, patiently waiting for our senses to grow sharper."<br>
+            <span style="font-size:0.93em;">— W.B. Yeats</span>
+        </div>
+    </div>
+    <script src="assets/js/backButton.js"></script>
+</body>
+</html> 
